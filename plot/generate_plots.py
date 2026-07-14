@@ -23,8 +23,9 @@ def plot_results(csv_file, title, output_name, y_label="Average Execution Time (
     for strategy, style in styles.items():
         plt.plot(df['Size'], df[strategy], **style)
         
+    plt.yscale('log')
     plt.xlabel('Array Size ($N$)', fontsize=10)
-    plt.ylabel(y_label, fontsize=10)
+    plt.ylabel(y_label + " (Log Scale)", fontsize=10)
     plt.title(title, fontsize=11, fontweight='bold', pad=10)
     plt.grid(True, which='both', color='lightgray', linestyle='--', linewidth=0.5)
     plt.legend(loc='best', frameon=True, edgecolor='black', fontsize=9)

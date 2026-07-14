@@ -440,7 +440,7 @@ def build_pdf():
     img2 = Image(os.path.join(plot_dir, "plot_ascending.png"), width=4.5*inch, height=3.0*inch)
     img2.hAlign = 'CENTER'
     story.append(img2)
-    story.append(Paragraph("Figure 2: Performance bifurcation on ascendingly sorted arrays (linear scale).", caption_style))
+    story.append(Paragraph("Figure 2: Performance bifurcation on ascendingly sorted arrays (logarithmic scale).", caption_style))
 
     story.append(PageBreak())
 
@@ -464,7 +464,7 @@ def build_pdf():
     img3 = Image(os.path.join(plot_dir, "plot_descending.png"), width=4.5*inch, height=3.0*inch)
     img3.hAlign = 'CENTER'
     story.append(img3)
-    story.append(Paragraph("Figure 3: Performance bifurcation on descendingly sorted arrays (linear scale).", caption_style))
+    story.append(Paragraph("Figure 3: Performance bifurcation on descendingly sorted arrays (logarithmic scale).", caption_style))
     
     story.append(PageBreak())
 
